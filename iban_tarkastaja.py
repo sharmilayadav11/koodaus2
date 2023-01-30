@@ -6,6 +6,8 @@ def main():
     onko_oikea_iban = iban.is_valid(tilinumero)
     if onko_oikea_iban:
         print("Antamasi tilinumero '{tilinumero}' on oikea IBAN.")
+        muotoiltu = iban.format(tilinumero)
+        print(f"Tilinumero muotoiltuna: {muotoiltu}")
     else:
         print(f"Antamasi tilinumero '{tilinumero}' ei ole IBAN.")
 
